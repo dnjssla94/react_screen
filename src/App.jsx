@@ -5,6 +5,7 @@ import ComboBox from './components/comboBox';
 import Grid from './components/contentTable';
 
 const result = {
+  bankName: '',
   insuranceName: '',
   insurancePeriod: '',
   paymentPeriod: '',
@@ -14,11 +15,12 @@ const result = {
 
 class App extends Component {
   state = {
-    bankId: "",
-    insuranceId: "",
+    bankId: '',
+    bankName: '',
+    insuranceId: '',
     insurances: [],
-    insuranceName:"",
-    insurancePeriod: "",
+    insuranceName:'',
+    insurancePeriod: '',
     paymentPeriod: '',
     paymentCycle: '',
     paymentAmount: '',
@@ -117,16 +119,16 @@ class App extends Component {
     this.setState({...this.state, bankId: value});
     switch(value) {
       case 'km':
-        this.setState({...this.state, insurances: this.state.kmInsuranceList});
+        this.setState({...this.state, insurances: this.state.kmInsuranceList, bankName:"국민은행"});
         break;
       case 'wr':
-        this.setState({...this.state, insurances: this.state.wrInsuranceList});
+        this.setState({...this.state, insurances: this.state.wrInsuranceList, bankName:"우리은행"});
         break;
       case 'sh':
-        this.setState({...this.state, insurances: this.state.shInsuranceList});
+        this.setState({...this.state, insurances: this.state.shInsuranceList, bankName:"신한은행"});
         break;
       case 'hn':
-        this.setState({...this.state, insurances: this.state.hnInsuranceList});
+        this.setState({...this.state, insurances: this.state.hnInsuranceList, bankName:"하나은행"});
         break;
     }
   }
@@ -245,6 +247,7 @@ class App extends Component {
     this.setState({...this.state,comboBoxVal: value});
   }
   insuranceDataCheck = () => {
+    result.bankName = this.state.bankName;
     result.insuranceName = this.state.insuranceName;
     result.insurancePeriod = this.state.insurancePeriod;
     result.paymentPeriod = this.state.paymentPeriod;
