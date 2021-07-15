@@ -14,7 +14,6 @@ const result = {
 
 class App extends Component {
   state = {
-    comboBoxVal : "",
     bankId: "",
     insuranceId: "",
     insurances: [],
@@ -244,8 +243,7 @@ class App extends Component {
   }
   getComboBoxVal = (value) => {
     this.setState({...this.state,comboBoxVal: value});
-  };
-
+  }
   insuranceDataCheck = () => {
     result.insuranceName = this.state.insuranceName;
     result.insurancePeriod = this.state.insurancePeriod;
