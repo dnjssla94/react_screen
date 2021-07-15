@@ -5,7 +5,6 @@ class ComboBox extends Component {
 
     
     getData = (event) => {
-      //console.log(event.target.value);
       this.props.getComboBoxVal(event.target.value)
     }
 

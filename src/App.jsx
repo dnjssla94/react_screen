@@ -212,7 +212,6 @@ class App extends Component {
         this.setState({...this.state,insurancePeriod:'30년' });
         break;
     }
-
   }
   getPaymentPeriod = (value) => {
     switch(value) {
@@ -243,8 +242,6 @@ class App extends Component {
   getPaymentAmount = (value) => {
     this.setState({...this.state, paymentAmount: value})
   }
-
-  
   getComboBoxVal = (value) => {
     this.setState({...this.state,comboBoxVal: value});
   };
@@ -261,7 +258,6 @@ class App extends Component {
   render() {
     return (
       <>
-        
         <table>
           <thead>
             <tr>
