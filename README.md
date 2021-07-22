@@ -53,7 +53,7 @@ yarn upgrade
 
 #### 프로젝트 주요 컴포턴트
 
-- public: 적적인(static) 파일 관리 
+- public: 정적인(static) 파일 관리 
 - src: 동적인 파일 관리
   - compoents
     - comboBox.jsx
